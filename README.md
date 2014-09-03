@@ -10,6 +10,7 @@ ipad/iphone 都可以用
 
 keychain做的数据持久化，利用苹果官方KeychainItemWrapper类
 
+**keychain存储的数据不会因为删除app而清除记录，请调用`-(void)clear`清除储存密码。**
 
 ### 简单使用方式
 
@@ -23,7 +24,7 @@ keychain做的数据持久化，利用苹果官方KeychainItemWrapper类
 
 以后便会以这个密码进行确认
 
-重置密码可以调用 `- (void)clear`
+清空密码可以调用 `- (void)clear`
 
 `- (void)verify` 验证手势密码在这里
 
