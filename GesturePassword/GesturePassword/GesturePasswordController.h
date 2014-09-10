@@ -16,4 +16,6 @@
 
 - (void)clear;
 
+- (BOOL)exist；
+
 @end

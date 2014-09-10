@@ -58,7 +58,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma -mark 验证手势密码
+
+#pragma mark - 验证手势密码
 - (void)verify{
     gesturePasswordView = [[GesturePasswordView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [gesturePasswordView.tentacleView setRerificationDelegate:self];
@@ -67,28 +68,36 @@
     [self.view addSubview:gesturePasswordView];
 }
 
-#pragma -mark 重置手势密码
+#pragma mark - 重置手势密码
 - (void)reset{
     gesturePasswordView = [[GesturePasswordView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [gesturePasswordView.tentacleView setResetDelegate:self];
     [gesturePasswordView.tentacleView setStyle:2];
-    [gesturePasswordView.imgView setHidden:YES];
+//    [gesturePasswordView.imgView setHidden:YES];
     [gesturePasswordView.forgetButton setHidden:YES];
     [gesturePasswordView.changeButton setHidden:YES];
     [self.view addSubview:gesturePasswordView];
 }
 
-#pragma -mark 清空记录
+#pragma mark - 判断是否已存在手势密码
+- (BOOL)exist{
+    KeychainItemWrapper * keychin = [[KeychainItemWrapper alloc]initWithIdentifier:@"Gesture" accessGroup:nil];
+    password = [keychin objectForKey:(__bridge id)kSecValueData];
+    if ([password isEqualToString:@""])return NO;
+    return YES;
+}
+
+#pragma mark - 清空记录
 - (void)clear{
     KeychainItemWrapper * keychin = [[KeychainItemWrapper alloc]initWithIdentifier:@"Gesture" accessGroup:nil];
     [keychin resetKeychainItem];
 }
 
-#pragma -mark 改变手势密码
+#pragma mark - 改变手势密码
 - (void)change{
 }
 
-#pragma -mark 忘记手势密码
+#pragma mark - 忘记手势密码
 - (void)forget{
 }
 
@@ -129,7 +138,6 @@
             return NO;
         }
     }
-    
 }
 
 
