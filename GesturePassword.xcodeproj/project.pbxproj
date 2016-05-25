@@ -25,6 +25,8 @@
 		27D58DAE19A83EEC00074D21 /* GesturePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D58DAD19A83EEC00074D21 /* GesturePasswordController.m */; };
 		27D58DB119A845AB00074D21 /* GesturePasswordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D58DB019A845AB00074D21 /* GesturePasswordButton.m */; };
 		27D58DB419A8710C00074D21 /* TentacleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D58DB319A8710C00074D21 /* TentacleView.m */; };
+		A827A9801CF6497900665B63 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = A827A97F1CF6497900665B63 /* logo2.png */; };
+		A827A9821CF65EAF00665B63 /* IMG_3394.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A827A9811CF65EAF00665B63 /* IMG_3394.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		27D58DB019A845AB00074D21 /* GesturePasswordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GesturePasswordButton.m; path = GesturePassword/GesturePasswordButton.m; sourceTree = "<group>"; };
 		27D58DB219A8710C00074D21 /* TentacleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TentacleView.h; path = GesturePassword/TentacleView.h; sourceTree = "<group>"; };
 		27D58DB319A8710C00074D21 /* TentacleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TentacleView.m; path = GesturePassword/TentacleView.m; sourceTree = "<group>"; };
+		A827A97F1CF6497900665B63 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
+		A827A9811CF65EAF00665B63 /* IMG_3394.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3394.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				27D58D7E19A83DD200074D21 /* GesturePassword-Info.plist */,
+				A827A97F1CF6497900665B63 /* logo2.png */,
+				A827A9811CF65EAF00665B63 /* IMG_3394.jpg */,
 				27D58D7F19A83DD200074D21 /* InfoPlist.strings */,
 				27D58D8219A83DD200074D21 /* main.m */,
 				27D58D8419A83DD200074D21 /* GesturePassword-Prefix.pch */,
@@ -265,6 +271,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D58D8119A83DD200074D21 /* InfoPlist.strings in Resources */,
+				A827A9801CF6497900665B63 /* logo2.png in Resources */,
+				A827A9821CF65EAF00665B63 /* IMG_3394.jpg in Resources */,
 				27D58D8919A83DD200074D21 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

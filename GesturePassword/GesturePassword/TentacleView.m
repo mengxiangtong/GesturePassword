@@ -42,7 +42,11 @@
     UITouch *touch = [touches anyObject];
     [touchesArray removeAllObjects];
     [touchedArray removeAllObjects];
+    
+    //调用代理
     [touchBeginDelegate gestureTouchBegin];
+    
+    
     success=1;
     if (touch) {
         touchPoint = [touch locationInView:self];
@@ -93,15 +97,27 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+      NSLog(@" 接触 结束");
+    
     NSMutableString * resultString=[NSMutableString string];
     for ( NSDictionary * num in touchesArray ){
         if(![num objectForKey:@"num"])break;
         [resultString appendString:[num objectForKey:@"num"]];
     }
+    
+    //
     if(style==1){
+          NSLog(@"  yan zheng");
         success = [rerificationDelegate verification:resultString];
+        if (success) {
+              NSLog(@"yan zheng y");
+        }else{
+              NSLog(@"  yanzheng  x");
+        }
     }
-    else {
+    else
+    {
+          NSLog(@"chongzhi");
         success = [resetDelegate resetPassword:resultString];
     }
     
@@ -150,6 +166,7 @@
 - (void)enterArgin {
     [touchesArray removeAllObjects];
     [touchedArray removeAllObjects];
+    
     for (int i=0; i<buttonArray.count; i++) {
         GesturePasswordButton * buttonTemp = ((GesturePasswordButton *)[buttonArray objectAtIndex:i]);
         [buttonTemp setSelected:NO];

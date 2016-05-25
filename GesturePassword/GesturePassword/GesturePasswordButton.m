@@ -35,31 +35,40 @@
     
     if (selected) {
         if (success) {
-            CGContextSetRGBStrokeColor(context, 2/255.f, 174/255.f, 240/255.f,1);//线条颜色
-            CGContextSetRGBFillColor(context,2/255.f, 174/255.f, 240/255.f,1);
-        }
-        else {
+           CGContextSetRGBStrokeColor(context, 2/255.f, 174/255.f, 240/255.f,1);//线条颜色
+
+           CGContextSetRGBFillColor(context,2/255.f, 174/255.f, 240/255.f,1);
+        }else{
             CGContextSetRGBStrokeColor(context, 208/255.f, 36/255.f, 36/255.f,1);//线条颜色
             CGContextSetRGBFillColor(context,208/255.f, 36/255.f, 36/255.f,1);
         }
+        
         CGRect frame = CGRectMake(bounds.size.width/2-bounds.size.width/8+1, bounds.size.height/2-bounds.size.height/8, bounds.size.width/4, bounds.size.height/4);
         
         CGContextAddEllipseInRect(context,frame);
         CGContextFillPath(context);
     }
-    else{
-        CGContextSetRGBStrokeColor(context, 1,1,1,1);//线条颜色
+    else
+    {
+        //默认边框颜色
+       // CGContextSetRGBStrokeColor(context, 1,1,1,1);//线条颜色
+        CGContextSetRGBStrokeColor(context, 185/255.f, 184/255.f, 180/255.f,1);//线条颜色
+
     }
     
-    CGContextSetLineWidth(context,2);
+    CGContextSetLineWidth(context,1);
     CGRect frame = CGRectMake(2, 2, bounds.size.width-3, bounds.size.height-3);
+
     CGContextAddEllipseInRect(context,frame);
     CGContextStrokePath(context);
+    
     if (success) {
         CGContextSetRGBFillColor(context,30/255.f, 175/255.f, 235/255.f,0.3);
+
     }
     else {
         CGContextSetRGBFillColor(context,208/255.f, 36/255.f, 36/255.f,0.3);
+
     }
     CGContextAddEllipseInRect(context,frame);
     if (selected) {
